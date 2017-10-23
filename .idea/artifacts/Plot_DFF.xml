@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Plot_DFF">
+    <output-path>$PROJECT_DIR$/out/artifacts/Plot_DFF</output-path>
+    <root id="archive" name="Plot_DFF.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="Plot_DFF" />
+      <element id="library" level="project" name="Maven: sc.fiji:LSM_Toolbox:4.1.1" />
+    </root>
+  </artifact>
+</component>

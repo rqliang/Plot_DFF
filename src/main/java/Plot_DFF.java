@@ -1,9 +1,11 @@
+import com.sun.prism.j2d.J2DPrismGraphics;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.WindowManager;
 import ij.gui.Plot;
 import ij.gui.PlotWindow;
 import ij.measure.ResultsTable;
+import ij.plugin.JpegWriter;
 import ij.plugin.PlugIn;
 import ij.plugin.filter.Analyzer;
 import ij.plugin.frame.RoiManager;
@@ -13,6 +15,8 @@ import org.imagearchive.lsm.reader.info.LSMFileInfo;
 import org.imagearchive.lsm.toolbox.info.CZLSMInfoExtended;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 public class Plot_DFF implements PlugIn {
 
@@ -23,10 +27,9 @@ public class Plot_DFF implements PlugIn {
         final CZLSMInfoExtended cz = (CZLSMInfoExtended) ((ImageDirectory) openLSM.imageDirectories.get(0)).TIF_CZ_LSMINFO;
         //final int n = new Long(cz.timeStamps.NumberTimeStamps).intValue();
         double[] timeStamps = cz.timeStamps.TimeStamps;
-        ResultsTable rt = Analyzer.getResultsTable();
-        final int nRow = rt.getCounter();
         final RoiManager roiManager = RoiManager.getInstance();
-
+        ResultsTable rt = roiManager.multiMeasure(imp);
+        final int nRow = rt.getCounter();
         final int nROI = roiManager.getCount();
         final int nCol = rt.getLastColumn();
         ArrayUtil arrayUtil = new ArrayUtil(nROI);
@@ -34,6 +37,7 @@ public class Plot_DFF implements PlugIn {
         double sd[] = new double[nRow];
         double[] yplusSD = new double[nRow];
         double[] yMinusSD = new double[nRow];
+
 
         for(int i=0, j=0; i<nCol; i++){
             String header = rt.getColumnHeading(i);
@@ -52,7 +56,7 @@ public class Plot_DFF implements PlugIn {
             for(int j=0; j<nROI; j++)
                 arrayUtil.putValue(j,(float) rt.getValue(String.format("dFF%d",j+1),i));
             y[i] = arrayUtil.getMean();
-            sd[i] = Math.sqrt(arrayUtil.getVariance());
+            sd[i] = Math.sqrt(arrayUtil.getVariance()/nROI);
             yplusSD[i] = y[i] + sd[i];
             yMinusSD[i] = y[i] - sd[i];
         }
@@ -60,21 +64,36 @@ public class Plot_DFF implements PlugIn {
 
         for(int i=0; i<nRow; i++){
             rt.setValue("MeanDff",i,y[i]);
-            rt.setValue("std",i,sd[i]);
+            rt.setValue("SEM",i,sd[i]);
             rt.setValue("Time",i, timeStamps[i]);
         }
+        String thePath = IJ.getDirectory("image");
+        try {
+            rt.show("Results");
+            rt.saveAs(thePath +"/" + imp.getShortTitle() + "-data.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        rt.saveAs(IJ.getDirectory("image" + ));
+        ActionEvent actionEvent = new ActionEvent(imp,0,"Save...");
+        roiManager.actionPerformed(actionEvent);
+        //roiManager.reset();
+
+
         Plot plot = new Plot("\u0394F/F of " + imp.getShortTitle(), "Time (s)" ,"\u0394F/F",
                 timeStamps, y);
         //plot.setLimits(timeStamps[0],timeStamps[timeStamps.length-1],Tools.getMinMax(yMinusSD)[0],Tools.getMinMax(yplusSD)[1]);
         plot.draw();
         plot.setColor(Color.BLUE);
+
         plot.addPoints(timeStamps,yplusSD,Plot.LINE);
         plot.draw();
         plot.addPoints(timeStamps,yMinusSD,Plot.LINE);
         plot.draw();
         plot.setLimitsToFit(false);
-        //PlotWindow plotWindow = plot.show();
+        PlotWindow plotWindow = plot.show();
+        ImagePlus plotImg = plotWindow.getImagePlus();
+        JpegWriter.save(plotImg,thePath +"/" + imp.getShortTitle()+"-plot.jpg",100);
+        plotWindow.close();
     }
 }

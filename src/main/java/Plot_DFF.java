@@ -81,16 +81,21 @@ public class Plot_DFF implements PlugIn {
 
 
         Plot plot = new Plot("\u0394F/F of " + imp.getShortTitle(), "Time (s)" ,"\u0394F/F",
-                timeStamps, y);
+                timeStamps, rt.getColumnAsDoubles(rt.getColumnIndex("dFF1")),Plot.LINE);
         //plot.setLimits(timeStamps[0],timeStamps[timeStamps.length-1],Tools.getMinMax(yMinusSD)[0],Tools.getMinMax(yplusSD)[1]);
+        plot.setFrameSize(1024,768);
+        plot.setLineWidth(4);
+        plot.setFont(0,48);
         plot.draw();
-        plot.setColor(Color.BLUE);
+        for(int i=2; i<=nROI; i++){
+            plot.addPoints(timeStamps, rt.getColumnAsDoubles(rt.getColumnIndex(String.format("dFF%d",i))),Plot.LINE);
+            plot.draw();
+        }
+        plot.setColor(Color.RED);
+        plot.addPoints(timeStamps,y,Plot.LINE);
+        plot.draw();
+        plot.setLimitsToFit(true);
 
-        plot.addPoints(timeStamps,yplusSD,Plot.LINE);
-        plot.draw();
-        plot.addPoints(timeStamps,yMinusSD,Plot.LINE);
-        plot.draw();
-        plot.setLimitsToFit(false);
         PlotWindow plotWindow = plot.show();
         ImagePlus plotImg = plotWindow.getImagePlus();
         JpegWriter.save(plotImg,thePath +"/" + imp.getShortTitle()+"-plot.jpg",100);

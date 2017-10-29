@@ -3,6 +3,7 @@ import ij.IJ;
 import ij.ImagePlus;
 import ij.WindowManager;
 import ij.gui.Plot;
+import ij.gui.PlotDialog;
 import ij.gui.PlotWindow;
 import ij.measure.ResultsTable;
 import ij.plugin.JpegWriter;
@@ -83,9 +84,14 @@ public class Plot_DFF implements PlugIn {
         Plot plot = new Plot("\u0394F/F of " + imp.getShortTitle(), "Time (s)" ,"\u0394F/F",
                 timeStamps, rt.getColumnAsDoubles(rt.getColumnIndex("dFF1")),Plot.LINE);
         //plot.setLimits(timeStamps[0],timeStamps[timeStamps.length-1],Tools.getMinMax(yMinusSD)[0],Tools.getMinMax(yplusSD)[1]);
-        plot.setFrameSize(1024,768);
+        /*plot.setFrameSize(1024,768);
         plot.setLineWidth(4);
-        plot.setFont(0,48);
+        plot.setFont(0,48);*/
+        plot.setXTicks(true);
+        plot.setXMinorTicks(true);
+        plot.setYTicks(true);
+        plot.setYMinorTicks(true);
+
         plot.draw();
         for(int i=2; i<=nROI; i++){
             plot.addPoints(timeStamps, rt.getColumnAsDoubles(rt.getColumnIndex(String.format("dFF%d",i))),Plot.LINE);
@@ -96,9 +102,11 @@ public class Plot_DFF implements PlugIn {
         plot.draw();
         plot.setLimitsToFit(true);
 
-        PlotWindow plotWindow = plot.show();
-        ImagePlus plotImg = plotWindow.getImagePlus();
+        PlotDialog plotDialog = new PlotDialog(plot, PlotDialog.AXIS_OPTIONS);
+        plotDialog.showDialog(null);
+        //PlotWindow plotWindow = plot.show();
+        ImagePlus plotImg = plot.makeHighResolution("DFF",4,true,true);
         JpegWriter.save(plotImg,thePath +"/" + imp.getShortTitle()+"-plot.jpg",100);
-        plotWindow.close();
+        //plotWindow.close();
     }
 }

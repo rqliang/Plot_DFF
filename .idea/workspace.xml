@@ -6,8 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0606dcd4-cc53-4971-9581-38e1ee0680f1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="0606dcd4-cc53-4971-9581-38e1ee0680f1" name="Default" comment="plot every lines.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Plot_DFF.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Plot_DFF.java" afterPath="$PROJECT_DIR$/src/main/java/Plot_DFF.java" />
     </list>
@@ -25,8 +26,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -35,8 +36,8 @@
       <file leaf-file-name="Plot_DFF.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Plot_DFF.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="79" column="10" lean-forward="false" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+            <state relative-caret-position="357">
+              <caret line="105" column="36" lean-forward="false" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlotWindow.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/net/imagej/ij/1.51h/ij-1.51h.jar!/ij/gui/PlotWindow.class">
+      <file leaf-file-name="Plot.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/net/imagej/ij/1.51h/ij-1.51h.jar!/ij/gui/Plot.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-471">
-              <caret line="271" column="82" lean-forward="true" selection-start-line="271" selection-start-column="82" selection-end-line="271" selection-end-column="82" />
+            <state relative-caret-position="442">
+              <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -67,6 +68,8 @@
     <findStrings>
       <find>nROI</find>
       <find>title</find>
+      <find>xlabel</find>
+      <find>String[]</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,8 +97,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="318" />
-    <option name="y" value="192" />
+    <option name="x" value="1826" />
+    <option name="y" value="172" />
     <option name="width" value="1282" />
     <option name="height" value="776" />
   </component>
@@ -114,6 +117,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Plot_DFF" type="cbb8eebc:String" user="Plot_DFF" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,6 +158,14 @@
             <path>
               <item name="Plot_DFF" type="b2602c69:ProjectViewProjectNode" />
               <item name="Plot_DFF" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="Plot_DFF" type="462c0819:PsiDirectoryNode" />
+              <item name="Plot_DFF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Plot_DFF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Plot_DFF" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -164,38 +188,23 @@
             </path>
             <path>
               <item name="Plot_DFF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Plot_DFF" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Plot_DFF" type="cbb8eebc:String" user="Plot_DFF" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ImageJ" />
+    <property name="last_opened_file_path" value="$USER_HOME$/ImageJ" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="plot_dff" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -307,26 +316,41 @@
       <option name="presentableId" value="Default" />
       <updated>1508533790905</updated>
     </task>
+    <task id="LOCAL-00001" summary="plot every lines.">
+      <created>1508817642369</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1508817642369</updated>
+    </task>
+    <task id="LOCAL-00002" summary="plot every lines.">
+      <created>1508817703770</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1508817703770</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="318" y="192" width="1282" height="776" extended-state="0" />
+    <frame x="1826" y="172" width="1282" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2580645" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27086744" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -344,11 +368,77 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="plot every lines." />
+    <option name="LAST_COMMIT_MESSAGE" value="plot every lines." />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/imagej/ij/1.51h/ij-1.51h.jar!/ij/gui/Plot.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plot_DFF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" column="73" lean-forward="false" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plot_DFF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="96" column="32" lean-forward="false" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plot_DFF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="79" column="10" lean-forward="false" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -428,48 +518,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/imagej/ij/1.51h/ij-1.51h.jar!/ij/measure/ResultsTable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-711">
-          <caret line="537" column="16" lean-forward="false" selection-start-line="537" selection-start-column="16" selection-end-line="537" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/imagej/ij/1.51h/ij-1.51h.jar!/ij/ImagePlus.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9861">
-          <caret line="998" column="26" lean-forward="false" selection-start-line="998" selection-start-column="21" selection-end-line="998" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/imagej/ij/1.51h/ij-1.51h.jar!/ij/measure/ResultsTable.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/net/imagej/ij/1.51h/ij-1.51h.jar!/ij/ImagePlus.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/net/imagej/ij/1.51h/ij-1.51h.jar!/ij/gui/PlotWindow.class" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/net/imagej/ij/1.51h/ij-1.51h.jar!/ij/gui/Plot.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8385">
-          <caret line="611" column="16" lean-forward="false" selection-start-line="611" selection-start-column="16" selection-end-line="611" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/imagej/ij/1.51h/ij-1.51h.jar!/ij/gui/PlotWindow.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-471">
-          <caret line="271" column="82" lean-forward="true" selection-start-line="271" selection-start-column="82" selection-end-line="271" selection-end-column="82" />
+        <state relative-caret-position="442">
+          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Plot_DFF.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="79" column="10" lean-forward="false" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+        <state relative-caret-position="357">
+          <caret line="105" column="36" lean-forward="false" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -484,7 +555,6 @@
           <artifact-editor>
             <show-content>
               <type id="library" />
-              <type id="artifact" />
             </show-content>
           </artifact-editor>
           <last-edited>Plot_DFF</last-edited>
@@ -492,7 +562,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
+                <option value="0.54495007" />
               </list>
             </option>
           </splitter-proportions>
@@ -524,7 +594,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>Java1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -1,14 +1,11 @@
-import com.sun.prism.j2d.J2DPrismGraphics;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.WindowManager;
 import ij.gui.Plot;
 import ij.gui.PlotDialog;
-import ij.gui.PlotWindow;
 import ij.measure.ResultsTable;
 import ij.plugin.JpegWriter;
 import ij.plugin.PlugIn;
-import ij.plugin.filter.Analyzer;
 import ij.plugin.frame.RoiManager;
 import ij.util.ArrayUtil;
 import org.imagearchive.lsm.reader.info.ImageDirectory;
@@ -101,7 +98,7 @@ public class Plot_DFF implements PlugIn {
         plot.addPoints(timeStamps,y,Plot.LINE);
         plot.draw();
         plot.setLimitsToFit(true);
-
+        plot.show();
         PlotDialog plotDialog = new PlotDialog(plot, PlotDialog.AXIS_OPTIONS);
         plotDialog.showDialog(null);
         //PlotWindow plotWindow = plot.show();
